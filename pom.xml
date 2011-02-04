@@ -47,8 +47,9 @@
 
   <licenses>
     <license>
-      <name>MIT license</name>
-      <comments>All source code is under the MIT license.</comments>
+      <name>The MIT license</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+      <distribution>repo</distribution>
     </license>
   </licenses>
 
@@ -61,9 +62,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkins/console-column-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkins/console-column-plugin.git</developerConnection>
-    <url>https://github.com/jenkins/console-column-plugin</url>
+    <connection>scm:git:git://github.com/jenkinsci/console-column-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:jenkinsci/console-column-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/console-column-plugin</url>
   </scm>
 
   <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
@@ -123,7 +124,6 @@
     <maven-remote-resources-plugin.version>1.1</maven-remote-resources-plugin.version>
     <maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
     <maven-site-plugin.version>2.1.1</maven-site-plugin.version>
-    <!-- Do not go to 2.1.2: http://jira.codehaus.org/browse/MSOURCES-30 -->
     <maven-source-plugin.version>2.1.2</maven-source-plugin.version>
     <maven-surefire-plugin.version>2.7.2</maven-surefire-plugin.version>
     <maven-surefire-report-plugin.version>2.7.2</maven-surefire-report-plugin.version>
@@ -167,24 +167,6 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>${maven-assembly-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-changelog-plugin</artifactId>
-          <version>${maven-changelog-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>${maven-checkstyle-plugin.version}</version>
-          <configuration>
-            <enableRSS>false</enableRSS>
-            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-            <xrefLocation>${project.reporting.outputDirectory}/${xref.depth}/xref</xrefLocation>
-            <excludes>**/target/generated*/**</excludes>
-          </configuration>
-        </plugin>
-        <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>${maven-clean-plugin.version}</version>
         </plugin>
@@ -199,35 +181,12 @@
           </configuration>
         </plugin>
         <plugin>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <version>${maven-dependency-plugin.version}</version>
-          <configuration>
-            <ignoreNonCompile>true</ignoreNonCompile>
-          </configuration>
-        </plugin>
-        <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven-deploy-plugin.version}</version>
         </plugin>
         <plugin>
-          <artifactId>maven-doap-plugin</artifactId>
-          <version>${maven-doap-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-eclipse-plugin</artifactId>
-          <version>${maven-eclipse-plugin.version}</version>
-          <configuration>
-            <downloadSources>true</downloadSources>
-            <useProjectReferences>true</useProjectReferences>
-          </configuration>
-        </plugin>
-        <plugin>
           <artifactId>maven-enforcer-plugin</artifactId>
           <version>${maven-enforcer-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-help-plugin</artifactId>
-          <version>${maven-help-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -236,51 +195,6 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>${maven-jar-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${maven-javadoc-plugin.version}</version>
-          <configuration>
-            <detectLinks>false</detectLinks>
-            <detectOfflineLinks>false</detectOfflineLinks>
-            <source>${compileSource}</source>
-            <failOnError>false</failOnError>
-            <maxmemory>1024m</maxmemory>
-            <quiet>true</quiet>
-            <show>private</show>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jxr-plugin</artifactId>
-          <version>${maven-jxr-plugin.version}</version>
-          <configuration>
-            <aggregate>true</aggregate>
-            <linkJavadoc>true</linkJavadoc>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-pmd-plugin</artifactId>
-          <version>${maven-pmd-plugin.version}</version>
-          <configuration>
-            <linkXref>true</linkXref>
-            <xrefLocation>${project.reporting.outputDirectory}/${xref.depth}/xref</xrefLocation>
-            <targetJdk>${compileSource}</targetJdk>
-            <includeTests>true</includeTests>
-            <excludes>
-              <exclude>**/target/generated*/**</exclude>
-            </excludes>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>${maven-project-info-reports-plugin.version}</version>
-          <configuration>
-            <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-reactor-plugin</artifactId>
-          <version>${maven-reactor-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
@@ -318,88 +232,28 @@
             <threadCount>4</threadCount>
           </configuration>
         </plugin>
-        <plugin>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>${maven-surefire-report-plugin.version}</version>
-          <configuration>
-            <showSuccess>false</showSuccess>
-            <testFailureIgnore>true</testFailureIgnore>
-            <xrefLocation>${project.reporting.outputDirectory}/${xref.depth}/xref-test</xrefLocation>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>${maven-war-plugin.version}</version>
-          <configuration>
-            <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>apt-maven-plugin</artifactId>
-          <version>${apt-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>axistools-maven-plugin</artifactId>
-          <version>${axistools-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>buildnumber-maven-plugin</artifactId>
-          <version>${buildnumber-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>build-helper-maven-plugin</artifactId>
-          <version>${build-helper-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>cobertura-maven-plugin</artifactId>
-          <version>${cobertura-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>findbugs-maven-plugin</artifactId>
-          <version>${findbugs-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>javancss-maven-plugin</artifactId>
-          <version>${javancss-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>jdepend-maven-plugin</artifactId>
-          <version>${jdepend-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>taglist-maven-plugin</artifactId>
-          <version>${taglist-maven-plugin.version}</version>
-          <configuration>
-            <tags>
-              <tag>TODO</tag>
-              <tag>FIXME</tag>
-              <tag>@todo</tag>
-              <tag>@deprecated</tag>
-            </tags>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>versions-maven-plugin</artifactId>
-          <version>${versions-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>xml-maven-plugin</artifactId>
-          <version>${xml-maven-plugin.version}</version>
-        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <artifactId>maven-doap-plugin</artifactId>
+        <version>${maven-doap-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>site</id>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <doapFile>${project.reporting.outputDirectory}/doap.rdf</doapFile>
+          <asfExtOptions>
+            <included>false</included>
+          </asfExtOptions>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
         <version>${maven-site-plugin.version}</version>
