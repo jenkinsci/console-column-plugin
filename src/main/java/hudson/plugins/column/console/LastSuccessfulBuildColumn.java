@@ -33,11 +33,17 @@ import net.sf.json.JSONObject;
 import org.kohsuke.stapler.StaplerRequest;
 
 /**
+ * A {@link ListViewColumn} which adds a fast-path icon to the
+ * <code>lastSuccessfulBuild</code> console output.
+ * 
  * @author <a href="mailto:jieryn@gmail.com">Jesse Farinacci</a>
  * @since 1.0
  */
 public final class LastSuccessfulBuildColumn extends ListViewColumn
 {
+  /**
+   * The plugin descriptor.
+   */
   private static final class ConsoleColumnDescriptor extends
       Descriptor<ListViewColumn>
   {
@@ -55,6 +61,9 @@ public final class LastSuccessfulBuildColumn extends ListViewColumn
     }
   }
 
+  /**
+   * The plugin descriptor.
+   */
   @Extension
   public static final Descriptor<ListViewColumn> DESCRIPTOR = new ConsoleColumnDescriptor();
 
