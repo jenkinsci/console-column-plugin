@@ -47,7 +47,7 @@
 
     <links>
       <item name="Plugin Wiki" href="http://wiki.jenkins-ci.org/display/JENKINS/Console+Column+Plugin" />
-      <item name="Plugin Issues" href="#" />
+      <item name="Plugin Issues" href="http://issues.jenkins-ci.org/browse/JENKINS/component/15790" />
       <item name="Plugin SCM" href="https://github.com/jenkinsci/console-column-plugin" />
       <item name="Jenkins" href="http://jenkins-ci.org/" />
     </links>
