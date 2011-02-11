@@ -24,8 +24,8 @@
 
 <j:jelly xmlns:j="jelly:core">
   <td>
-    <a href="job/${job.name}/lastStableBuild/console">
-      <img src="images/16x16/terminal.gif" alt="${%ConsoleColumn.LastStableBuild.Title}" />
+    <a href="job/${job.name}/lastStableBuild/console" title="${%ConsoleColumn.LastStableBuild.Title}">
+      <img src="${imagesURL}/${subIconSize}/terminal.gif" />
     </a>
   </td>
 </j:jelly>
