@@ -23,5 +23,7 @@
 -->
 
 <j:jelly xmlns:j="jelly:core">
-  <th>${%ConsoleColumn.LastFailedBuild.Header}</th>
+  <th tooltip="${%ConsoleColumn.LastFailedBuild.Tooltip}">
+    ${%ConsoleColumn.LastFailedBuild.Header}
+  </th>
 </j:jelly>
