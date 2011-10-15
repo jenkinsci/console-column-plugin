@@ -24,8 +24,15 @@
 
 <j:jelly xmlns:j="jelly:core">
   <td>
-    <a href="job/${job.name}/lastSuccessfulBuild/console" title="${%ConsoleColumn.LastSuccessfulBuild.Title}">
-      <img src="${imagesURL}/${subIconSize}/terminal.gif" />
-    </a>
+    <j:choose>
+      <j:when test="${job.lastSuccessfulBuild == null}">
+        ${%ConsoleColumn.LastSuccessfulBuild.NotAvailable}
+      </j:when>
+      <j:otherwise>
+        <a href="job/${job.name}/lastSuccessfulBuild/console" title="${%ConsoleColumn.LastSuccessfulBuild.Title}">
+          <img src="${imagesURL}/${subIconSize}/terminal.gif" />
+        </a>
+      </j:otherwise>
+    </j:choose>
   </td>
 </j:jelly>
