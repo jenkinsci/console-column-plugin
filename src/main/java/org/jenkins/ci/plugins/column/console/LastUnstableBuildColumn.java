@@ -30,6 +30,7 @@ import hudson.views.ListViewColumnDescriptor;
 import hudson.views.ListViewColumn;
 import net.sf.json.JSONObject;
 
+import org.jenkins.ci.plugins.column.Messages;
 import org.kohsuke.stapler.StaplerRequest;
 
 /**
