@@ -22,11 +22,10 @@
  * THE SOFTWARE.
  */
 
-package hudson.plugins.column.console;
+package org.jenkins.ci.plugins.column.console;
 
 import hudson.Extension;
 import hudson.model.Descriptor;
-import hudson.plugins.column.Messages;
 import hudson.views.ListViewColumnDescriptor;
 import hudson.views.ListViewColumn;
 import net.sf.json.JSONObject;

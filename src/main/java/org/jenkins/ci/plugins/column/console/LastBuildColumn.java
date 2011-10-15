@@ -22,11 +22,10 @@
  * THE SOFTWARE.
  */
 
-package hudson.plugins.column.console;
+package org.jenkins.ci.plugins.column.console;
 
 import hudson.Extension;
 import hudson.model.Descriptor;
-import hudson.plugins.column.Messages;
 import hudson.views.ListViewColumnDescriptor;
 import hudson.views.ListViewColumn;
 import net.sf.json.JSONObject;
@@ -35,12 +34,12 @@ import org.kohsuke.stapler.StaplerRequest;
 
 /**
  * A {@link ListViewColumn} which adds a fast-path icon to the
- * <code>lastStableBuild</code> console output.
+ * <code>lastBuild</code> console output.
  * 
  * @author <a href="mailto:jieryn@gmail.com">Jesse Farinacci</a>
  * @since 1.0
  */
-public final class LastStableBuildColumn extends ListViewColumn {
+public final class LastBuildColumn extends ListViewColumn {
     /**
      * The plugin descriptor.
      */
@@ -48,20 +47,19 @@ public final class LastStableBuildColumn extends ListViewColumn {
             ListViewColumnDescriptor {
         @Override
         public String getDisplayName() {
-            return Messages.ConsoleColumn_Last_Stable_DisplayName();
+            return Messages.ConsoleColumn_Last_DisplayName();
         }
 
         @Override
         public ListViewColumn newInstance(final StaplerRequest request,
                 final JSONObject formData) throws FormException {
-            return new LastStableBuildColumn();
+            return new LastBuildColumn();
         }
 
         @Override
         public boolean shownByDefault() {
             return false;
         }
-
     }
 
     /**
