@@ -25,6 +25,7 @@
 package org.jenkins.ci.plugins.column.console;
 
 import hudson.Extension;
+import hudson.model.Items;
 import hudson.model.Descriptor;
 import hudson.views.ListViewColumnDescriptor;
 import hudson.views.ListViewColumn;
@@ -46,6 +47,14 @@ public final class LastUnsuccessfulBuildColumn extends ListViewColumn {
      */
     private static final class ConsoleColumnDescriptor extends
             ListViewColumnDescriptor {
+        public ConsoleColumnDescriptor() {
+            super();
+            Items.XSTREAM2
+                    .addCompatibilityAlias(
+                            "hudson.plugins.column.console.LastUnsuccessfulBuildColumn",
+                            LastUnsuccessfulBuildColumn.class);
+        }
+
         @Override
         public String getDisplayName() {
             return Messages.ConsoleColumn_Last_Unsuccessful_DisplayName();
