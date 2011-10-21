@@ -25,7 +25,6 @@
 package org.jenkins.ci.plugins.column.console;
 
 import hudson.Extension;
-import hudson.model.Items;
 import hudson.model.Descriptor;
 import hudson.views.ListViewColumnDescriptor;
 import hudson.views.ListViewColumn;
@@ -47,13 +46,6 @@ public final class LastBuildColumn extends ListViewColumn {
      */
     private static final class ConsoleColumnDescriptor extends
             ListViewColumnDescriptor {
-        public ConsoleColumnDescriptor() {
-            super();
-            Items.XSTREAM2.addCompatibilityAlias(
-                    "hudson.plugins.column.console.LastBuildColumn",
-                    LastBuildColumn.class);
-        }
-
         @Override
         public String getDisplayName() {
             return Messages.ConsoleColumn_Last_DisplayName();
