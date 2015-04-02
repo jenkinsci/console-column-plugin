@@ -29,7 +29,7 @@
         ${%ConsoleColumn.LastStableBuild.NotAvailable}
       </j:when>
       <j:otherwise>
-        <a href="job/${job.name}/lastStableBuild/console" title="${%ConsoleColumn.LastStableBuild.Title}">
+        <a href="${job.url}lastStableBuild/console" title="${%ConsoleColumn.LastStableBuild.Title}">
           <img src="${imagesURL}/${subIconSize}/terminal.gif" />
         </a>
       </j:otherwise>
