@@ -31,7 +31,8 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.554.1</version>
+    <version>1.420</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>console-column-plugin</artifactId>
