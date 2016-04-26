@@ -29,7 +29,7 @@
         ${%ConsoleColumn.LastUnsuccessfulBuild.NotAvailable}
       </j:when>
       <j:otherwise>
-        <a href="job/${job.name}/lastUnsuccessfulBuild/console" title="${%ConsoleColumn.LastUnsuccessfulBuild.Title}">
+        <a href="${rootURL}/${job.url}lastUnsuccessfulBuild/console" title="${%ConsoleColumn.LastUnsuccessfulBuild.Title}">
           <img src="${imagesURL}/${subIconSize}/terminal.gif" />
         </a>
       </j:otherwise>
