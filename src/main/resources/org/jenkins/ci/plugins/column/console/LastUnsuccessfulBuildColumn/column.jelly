@@ -31,7 +31,7 @@
       </j:when>
       <j:otherwise>
         <a href="${rootURL}/${job.url}lastUnsuccessfulBuild/console" title="${%ConsoleColumn.LastUnsuccessfulBuild.Title}">
-          <l:icon class="icon-terminal icon-${subIconSize}" />
+          <l:icon class="icon-terminal ${subIconSizeClass}"/>
         </a>
       </j:otherwise>
     </j:choose>
