@@ -22,7 +22,8 @@
   THE SOFTWARE.
 -->
 
-<j:jelly xmlns:j="jelly:core">
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
   <td>
     <j:choose>
       <j:when test="${job.lastSuccessfulBuild == null}">
@@ -30,7 +31,7 @@
       </j:when>
       <j:otherwise>
         <a href="${rootURL}/${job.url}lastSuccessfulBuild/console" title="${%ConsoleColumn.LastSuccessfulBuild.Title}">
-          <img src="${imagesURL}/${subIconSize}/terminal.gif" />
+          <l:icon class="icon-terminal ${subIconSizeClass}"/>
         </a>
       </j:otherwise>
     </j:choose>
