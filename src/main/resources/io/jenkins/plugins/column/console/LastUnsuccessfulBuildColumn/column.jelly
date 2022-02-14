@@ -21,11 +21,20 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 -->
+
 <?jelly escape-by-default='true'?>
-<div>
-  <span>
-    The
-    <a href="https://plugins.jenkins.io/console-column-plugin/">Console Column Plugin</a>
-    provides a fast-path console link available for views.
-  </span>
-</div>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
+    <td>
+        <j:choose>
+            <j:when test="${job.lastUnsuccessfulBuild == null}">
+                ${%ConsoleColumn.LastUnsuccessfulBuild.NotAvailable}
+            </j:when>
+            <j:otherwise>
+                <a href="${rootURL}/${job.url}lastUnsuccessfulBuild/console"
+                   title="${%ConsoleColumn.LastUnsuccessfulBuild.Title}">
+                    <l:icon class="icon-terminal ${subIconSizeClass}"/>
+                </a>
+            </j:otherwise>
+        </j:choose>
+    </td>
+</j:jelly>
