@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package org.jenkins.ci.plugins.column.console;
+package io.jenkins.plugins.column.console;
 
 import hudson.init.InitMilestone;
 import hudson.init.Initializer;

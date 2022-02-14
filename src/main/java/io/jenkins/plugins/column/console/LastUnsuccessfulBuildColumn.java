@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package org.jenkins.ci.plugins.column.console;
+package io.jenkins.plugins.column.console;
 
 import hudson.Extension;
 import hudson.model.Descriptor;
@@ -35,12 +35,12 @@ import org.kohsuke.stapler.StaplerRequest;
 
 /**
  * A {@link ListViewColumn} which adds a fast-path icon to the
- * <code>lastBuild</code> console output.
+ * <code>lastUnsuccessfulBuild</code> console output.
  * 
  * @author <a href="mailto:jieryn@gmail.com">Jesse Farinacci</a>
  * @since 1.0
  */
-public final class LastBuildColumn extends ListViewColumn {
+public final class LastUnsuccessfulBuildColumn extends ListViewColumn {
     /**
      * The plugin descriptor.
      */
@@ -48,13 +48,13 @@ public final class LastBuildColumn extends ListViewColumn {
             ListViewColumnDescriptor {
         @Override
         public String getDisplayName() {
-            return Messages.ConsoleColumn_Last_DisplayName();
+            return Messages.ConsoleColumn_Last_Unsuccessful_DisplayName();
         }
 
         @Override
         public ListViewColumn newInstance(final StaplerRequest request,
                 final JSONObject formData) throws FormException {
-            return new LastBuildColumn();
+            return new LastUnsuccessfulBuildColumn();
         }
 
         @Override
