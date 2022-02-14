@@ -24,16 +24,16 @@
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
-  <td>
-    <j:choose>
-      <j:when test="${job.lastFailedBuild == null}">
-        ${%ConsoleColumn.LastFailedBuild.NotAvailable}
-      </j:when>
-      <j:otherwise>
-        <a href="${rootURL}/${job.url}lastFailedBuild/console" title="${%ConsoleColumn.LastFailedBuild.Title}">
-          <l:icon class="icon-terminal ${subIconSizeClass}"/>
-        </a>
-      </j:otherwise>
-    </j:choose>
-  </td>
+    <td>
+        <j:choose>
+            <j:when test="${job.lastFailedBuild == null}">
+                ${%ConsoleColumn.LastFailedBuild.NotAvailable}
+            </j:when>
+            <j:otherwise>
+                <a href="${rootURL}/${job.url}lastFailedBuild/console" title="${%ConsoleColumn.LastFailedBuild.Title}">
+                    <l:icon class="icon-terminal ${subIconSizeClass}"/>
+                </a>
+            </j:otherwise>
+        </j:choose>
+    </td>
 </j:jelly>

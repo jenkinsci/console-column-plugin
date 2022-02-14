@@ -24,7 +24,7 @@
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core">
-  <th tooltip="${%ConsoleColumn.LastFailedBuild.Tooltip}">
-    ${%ConsoleColumn.LastFailedBuild.Header}
-  </th>
+    <th tooltip="${%ConsoleColumn.LastFailedBuild.Tooltip}">
+        ${%ConsoleColumn.LastFailedBuild.Header}
+    </th>
 </j:jelly>
