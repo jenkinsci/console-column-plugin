@@ -7,7 +7,7 @@ on:
 
 jobs:
   security-scan:
-    if: ${{ github.repository != github.event.pull_request.head.repo.full_name }}
+    if: github.repository_owner == 'jenkinsci'
     uses: jenkins-infra/jenkins-security-scan/.github/workflows/jenkins-security-scan.yaml@v1
     with:
       java-cache: '' # Optionally enable use of a build dependency cache. Specify 'maven' or 'gradle' as appropriate.
