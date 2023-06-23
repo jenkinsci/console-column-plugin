@@ -8,4 +8,4 @@ Console Column plugin
 
 Provide a fast-path console link available for views.
 
-![](/images/console-column.png)
+![](/images/console-column.png)  
