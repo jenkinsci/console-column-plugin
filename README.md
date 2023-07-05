@@ -1,4 +1,4 @@
-Console Column plugin
+Console Column plugin  
 ==============================
 [![Build Status](https://ci.jenkins.io/buildStatus/icon?job=Plugins/console-column-plugin/master)](https://ci.jenkins.io/job/plugins/job/console-column-plugin/)
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/console-column-plugin.svg)](https://plugins.jenkins.io/console-column-plugin/)
