@@ -27,7 +27,6 @@ package io.jenkins.plugins.column.console;
 import hudson.init.InitMilestone;
 import hudson.init.Initializer;
 import hudson.model.Items;
-
 import java.util.logging.Logger;
 
 /**
@@ -35,29 +34,21 @@ import java.util.logging.Logger;
  * @since 1.6
  */
 public final class XStreamCompatibility {
-    private static final Logger LOG = Logger.getLogger(XStreamCompatibility.class
-            .getName());
+    private static final Logger LOG = Logger.getLogger(XStreamCompatibility.class.getName());
 
     @Initializer(before = InitMilestone.PLUGINS_STARTED)
     public static void beforeInitMilestonePluginsStarted() {
         LOG.info("\n\n XSTREAM COMPATABILITY INIT \n\n");
+        Items.XSTREAM2.addCompatibilityAlias("hudson.plugins.column.console.LastBuildColumn", LastBuildColumn.class);
         Items.XSTREAM2.addCompatibilityAlias(
-                "hudson.plugins.column.console.LastBuildColumn",
-                LastBuildColumn.class);
+                "hudson.plugins.column.console.LastFailedBuildColumn", LastFailedBuildColumn.class);
         Items.XSTREAM2.addCompatibilityAlias(
-                "hudson.plugins.column.console.LastFailedBuildColumn",
-                LastFailedBuildColumn.class);
+                "hudson.plugins.column.console.LastStableBuildColumn", LastStableBuildColumn.class);
         Items.XSTREAM2.addCompatibilityAlias(
-                "hudson.plugins.column.console.LastStableBuildColumn",
-                LastStableBuildColumn.class);
+                "hudson.plugins.column.console.LastSuccessfulBuildColumn", LastSuccessfulBuildColumn.class);
         Items.XSTREAM2.addCompatibilityAlias(
-                "hudson.plugins.column.console.LastSuccessfulBuildColumn",
-                LastSuccessfulBuildColumn.class);
+                "hudson.plugins.column.console.LastUnstableBuildColumn", LastUnstableBuildColumn.class);
         Items.XSTREAM2.addCompatibilityAlias(
-                "hudson.plugins.column.console.LastUnstableBuildColumn",
-                LastUnstableBuildColumn.class);
-        Items.XSTREAM2.addCompatibilityAlias(
-                "hudson.plugins.column.console.LastUnsuccessfulBuildColumn",
-                LastUnsuccessfulBuildColumn.class);
+                "hudson.plugins.column.console.LastUnsuccessfulBuildColumn", LastUnsuccessfulBuildColumn.class);
     }
 }

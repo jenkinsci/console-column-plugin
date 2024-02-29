@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   The MIT License
 
@@ -23,7 +22,6 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -39,9 +37,7 @@
   <packaging>hpi</packaging>
 
   <name>Console Column Plugin</name>
-  <description>
-    Provide a fast-path console link available for views.
-  </description>
+  <description>Provide a fast-path console link available for views.</description>
   <url>https://github.com/jenkinsci/console-column-plugin</url>
   <licenses>
     <license>
@@ -62,13 +58,14 @@
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/console-column-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/console-column-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/console-column-plugin</url>
     <tag>${scmTag}</tag>
+    <url>https://github.com/jenkinsci/console-column-plugin</url>
   </scm>
 
   <properties>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.version>2.387.3</jenkins.version>
+    <jenkins.version>2.426.3</jenkins.version>
+    <spotless.check.skip>false</spotless.check.skip>
   </properties>
 
   <repositories>

@@ -26,11 +26,10 @@ package io.jenkins.plugins.column.console;
 
 import hudson.Extension;
 import hudson.model.Descriptor;
-import hudson.views.ListViewColumnDescriptor;
 import hudson.views.ListViewColumn;
-import net.sf.json.JSONObject;
-
+import hudson.views.ListViewColumnDescriptor;
 import io.jenkins.plugins.column.Messages;
+import net.sf.json.JSONObject;
 import org.kohsuke.stapler.StaplerRequest;
 
 /**
@@ -55,16 +54,14 @@ public final class LastFailedBuildColumn extends ListViewColumn {
     /**
      * The plugin descriptor.
      */
-    private static final class ConsoleColumnDescriptor extends
-            ListViewColumnDescriptor {
+    private static final class ConsoleColumnDescriptor extends ListViewColumnDescriptor {
         @Override
         public String getDisplayName() {
             return Messages.ConsoleColumn_Last_Failed_DisplayName();
         }
 
         @Override
-        public ListViewColumn newInstance(final StaplerRequest request,
-                                          final JSONObject formData) {
+        public ListViewColumn newInstance(final StaplerRequest request, final JSONObject formData) {
             return new LastFailedBuildColumn();
         }
 
