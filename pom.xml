@@ -37,7 +37,6 @@
   <packaging>hpi</packaging>
 
   <name>Console Column Plugin</name>
-  <description>Provide a fast-path console link available for views.</description>
   <url>https://github.com/jenkinsci/console-column-plugin</url>
   <licenses>
     <license>
@@ -64,7 +63,7 @@
 
   <properties>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.version>2.462.1</jenkins.version>
+    <jenkins.version>2.479</jenkins.version>
     <spotless.check.skip>false</spotless.check.skip>
   </properties>
 

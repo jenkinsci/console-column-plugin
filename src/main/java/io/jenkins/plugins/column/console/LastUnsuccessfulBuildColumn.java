@@ -30,11 +30,11 @@ import hudson.views.ListViewColumn;
 import hudson.views.ListViewColumnDescriptor;
 import io.jenkins.plugins.column.Messages;
 import net.sf.json.JSONObject;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 /**
  * A {@link ListViewColumn} which adds a fast-path icon to the
- * <code>lastUnsuccessfulBuild</code> console output.
+ * {@code lastUnsuccessfulBuild} console output.
  *
  * @author <a href="mailto:jieryn@gmail.com">Jesse Farinacci</a>
  * @since 1.0
@@ -61,7 +61,7 @@ public final class LastUnsuccessfulBuildColumn extends ListViewColumn {
         }
 
         @Override
-        public ListViewColumn newInstance(final StaplerRequest request, final JSONObject formData) {
+        public ListViewColumn newInstance(final StaplerRequest2 request, final JSONObject formData) {
             return new LastUnsuccessfulBuildColumn();
         }
 
