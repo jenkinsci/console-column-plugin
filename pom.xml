@@ -28,7 +28,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.86</version>
+    <version>4.88</version>
     <relativePath />
   </parent>
 
@@ -64,7 +64,7 @@
 
   <properties>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.version>2.426.3</jenkins.version>
+    <jenkins.version>2.462.1</jenkins.version>
     <spotless.check.skip>false</spotless.check.skip>
   </properties>
 
