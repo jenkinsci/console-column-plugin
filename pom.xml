@@ -65,6 +65,7 @@
     <changelist>999999-SNAPSHOT</changelist>
     <jenkins.version>2.479</jenkins.version>
     <spotless.check.skip>false</spotless.check.skip>
+    <ban-junit4-imports.skip>false</ban-junit4-imports.skip>
   </properties>
 
   <repositories>
